@@ -3,6 +3,14 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+
+/* header */
+.shop-color {
+  color: blue;
+}
+
+
+
 /* .search-field {
   border: none;
   border-radius: 50px;
@@ -46,7 +54,7 @@ body {
 
 
 .single-product {
-  background-color: azure;
+  background-color: rgb(218, 220, 224);
   padding: 10px;
   transition: 0.6s;
 }
