@@ -33,8 +33,12 @@ const showProducts = (products) => {
                <h6 class="text-light"> ${product.rating.count} <span class = "fa fa-users text-warning"> </span> </h6> </div>
         </div>
       <div class = "card-footer">
-        <button id = "details-btn"
-        class = "btn btn-danger"> Details </button>
+        <button type = "button"
+        onclick = "clickIndividualItem(${product.id})"
+        id = "details-btn"
+        class = "btn btn-danger"
+        data-bs-toggle = "modal"
+        data-bs-target = "#exampleModal"> Details </button>
         <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart</button>
       </div>
      </div>
@@ -61,7 +65,30 @@ const showDetails = (price, rating) => {
 `;
 
 }
-
+const clickIndividualItem = (productId) => {
+  fetch(`https://fakestoreapi.com/products/${productId}`)
+    .then(res => res.json())
+    .then(json => showIndividualItem(json))
+}
+const showIndividualItem = (product) => {
+  const modalTitle = document.getElementById('exampleModalLabel');
+  modalTitle.innerText = `[${product.id}]${product.title}`;
+  const modalBody = document.getElementById('single-item-body');
+  modalBody.innerHTML = `
+  <div class="d-flex justify-content-between align-items-center">
+  <img src=${product.image} class="img-fluid w-25" alt="">
+  <p class="ms-3">"${product.description.slice(0, 200)}"</p>
+  </div>
+  <div class="d-flex justify-content-between">
+  <h5>Category: ${product.category}</h5>
+      <h5 class="text-danger">Price: $ ${product.price}</h5>
+  </div>
+  <div class="d-flex justify-content-between">
+  <h6 class = "text-warning"> Rating: ${product.rating.rate} <span class = "fa fa-star checked text-warning"> </span> </h6 >
+      <h6>Rating Count: ${product.rating.count} </h6>
+  </div>
+  `;
+}
 
 let count = 0;
 const addToCart = (id, price) => {
