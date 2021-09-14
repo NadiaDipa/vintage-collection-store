@@ -33,7 +33,8 @@ const showProducts = (products) => {
                <h6 class="text-light"> ${product.rating.count} <span class = "fa fa-users text-warning"> </span> </h6> </div>
         </div>
       <div class = "card-footer">
-        <button id="details-btn" class="btn btn-danger">Details</button>
+        <button id = "details-btn"
+        class = "btn btn-danger"> Details </button>
         <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart</button>
       </div>
      </div>

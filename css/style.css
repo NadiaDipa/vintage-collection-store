@@ -1,47 +1,8 @@
 body {
-  /* background-color: #FDF6F0; */
   background-color: #DDDDDD;
   overflow-x: hidden;
   font-family: "Montserrat", sans-serif;
 }
-
-
-/* header */
-.shop-color {
-  color: blue;
-}
-
-
-
-/* .search-field {
-  border: none;
-  border-radius: 50px;
-  padding: 5px;
-  outline: none;
-}
-
-.search-field:hover {
-  outline: none;
-  border: none;
-}
-
-.search-box {
-  border: 1px solid rgb(3, 118, 211);
-  width: 281px;
-  border-radius: 5px;
-  margin: auto;
-  margin-top: 50px;
-  border-right: none;
-}
-
-.search-button {
-  padding: 10px 50px;
-  border-radius: 25px;
-  margin-left: 20px;
- 
-} */
-
-
 
 #all-products {
   display: grid;
@@ -69,7 +30,7 @@ body {
 .single-product:hover {
   box-shadow: 5px 5px 5px gray;
   border-radius: 10px;
-  border: 1px solid cyan;
+  border: 1px solid rgb(167, 29, 24);
 }
 
 .product-image {
