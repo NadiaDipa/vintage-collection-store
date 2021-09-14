@@ -20,19 +20,19 @@ const showProducts = (products) => {
     const div = document.createElement("div");
     div.classList.add("product");
     div.innerHTML = ` 
-    <div style="height:600px">
-      <div style="background-color: #c9c9c9;"  class="card h-100">
+    <div class="h-100">
+      <div style = "background-color:#112031;" class = "card h-100">
         <div style="background-color:white">
-        <img style="height:150px; width:150px" src="${product.image}" class="card-img-top mx-auto mt-3 mb-2" alt="...">
+        <img style="height:200px; width:150px" src="${product.image}" class="card-img-top mx-auto mt-3 mb-2" alt="...">
         </div>
-        <div class="card-body mt-2">
-             <h5 class="card-title">${product.title}</h5>
+        <div class="card-body mt-2 text-white">
+             <h5 class="card-title fw-bold text-light">${product.title}</h5>
             <p>Category: ${product.category}</p>
-             <h3 class="mt-5">Price: $ ${product.price}</h3>
-             <h5>Total-Rating: ${product.rating.rate}</h5>
-             <h6>Average-Rating: ${product.rating.count} </h6>
+             <h5 class="text-danger">Price: $ ${product.price}</h5>
+             <div class="d-flex justify-content-center gap-3"> <h6 class = "text-light"> ${product.rating.rate} <span class = "fa fa-star checked text-warning"> </span></h6>
+               <h6 class="text-light"> ${product.rating.count} <span class = "fa fa-users text-warning"> </span> </h6> </div>
         </div>
-      <div class = "card-footer d-flex justify-content-between">
+      <div class = "card-footer">
         <button id="details-btn" class="btn btn-danger">Details</button>
         <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart</button>
       </div>

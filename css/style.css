@@ -1,4 +1,6 @@
 body {
+  /* background-color: #FDF6F0; */
+  background-color: #DDDDDD;
   overflow-x: hidden;
   font-family: "Montserrat", sans-serif;
 }
@@ -48,13 +50,14 @@ body {
   text-align: center;
   width: 100%;
   margin: auto;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
 }
 
 
 .single-product {
-  width: 300px;
+ 
+  width: 400px;
   height: 525px;
   margin: 10px;
   border: 1px solid rgb(126, 126, 209);
@@ -64,7 +67,7 @@ body {
 }
 
 .single-product:hover {
-  box-shadow: 4px 4px 7px gray;
+  box-shadow: 5px 5px 5px gray;
   border-radius: 10px;
   border: 1px solid cyan;
 }
