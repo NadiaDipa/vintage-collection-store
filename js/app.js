@@ -79,13 +79,13 @@ const showIndividualItem = (product) => {
   <img src=${product.image} class="img-fluid w-25" alt="">
   <p class="ms-3">"${product.description.slice(0, 200)}"</p>
   </div>
-  <div class="d-flex justify-content-between">
-  <h5>Category: ${product.category}</h5>
-      <h5 class="text-danger">Price: $ ${product.price}</h5>
+  <div class="d-flex justify-content-between mt-3">
+  <h5 class="text-info">Category: ${product.category}</h5>
+      <h6 class = "text-warning"> Rating: ${product.rating.rate} <span class = "fa fa-star checked text-warning"> </span> </h6>
   </div>
   <div class="d-flex justify-content-between">
-  <h6 class = "text-warning"> Rating: ${product.rating.rate} <span class = "fa fa-star checked text-warning"> </span> </h6 >
-      <h6>Rating Count: ${product.rating.count} </h6>
+      <h5 class = "text-danger"> Price: $ ${product.price} </h5>
+      <h6 class = "text-warning"> Rating Count: ${product.rating.count} </h6>
   </div>
   `;
 }
