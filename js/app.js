@@ -53,9 +53,7 @@ const showDetails = (price, rating) => {
 
   const x = Array.from(Array(parseInt(rating)).keys()).map((r) => '<i class="bi bi-star-fill text-warning"></i>')
 
-  // console.log(x)
   document.getElementById("modal-body").innerHTML = `
-  
      <div class='p-3'>
       <p>Rating: ${Array.from(Array(parseInt(rating)).keys()).map(
         (r) => '<i class="bi bi-star-fill text-warning"></i>'
@@ -94,9 +92,6 @@ let count = 0;
 const addToCart = (id, price) => {
   count = count + 1;
   updatePrice("price", price);
-
-  // console.log(price, typeof price)
-
   updateTaxAndCharge();
   document.getElementById("total-Products").innerText = count;
   updateTotal();
@@ -105,7 +100,6 @@ const addToCart = (id, price) => {
 const getInputValue = (id) => {
   const element = document.getElementById(id).innerText;
   const converted = parseFloat(element);
-
   return converted;
 };
 
